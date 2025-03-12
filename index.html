@@ -1,0 +1,23 @@
+!DOCTYPE html>
+<html>
+<head>
+  <title>Автовоспроизведение звука (Попытка)</title>
+</head>
+<body>
+  
+  <audio id="myAudio" src="per.mp3" loop muted></audio>
+
+  <script>
+    const audio = document.getElementById("myAudio");
+
+    audio.addEventListener('loadeddata', () => {
+      audio.play();
+      setTimeout(() => {
+        audio.muted = false;
+        audio.volume = 1; // Установите желаемую громкость (от 0 до 1)
+      }, 2000); // Задержка в 2 секунды
+    });
+  </script>
+
+</body>
+</html>
